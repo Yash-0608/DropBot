@@ -1,0 +1,479 @@
+.dropbot {
+  position: relative;
+  width: 260px;
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-top: 24px;
+
+  color: #ffffff;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  cursor: default;
+}
+
+.dropbot-glow {
+  position: absolute;
+
+  top: 42px;
+  left: 50%;
+
+  width: 190px;
+  height: 190px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(61, 166, 255, 0.30) 0%,
+      rgba(61, 166, 255, 0.14) 35%,
+      rgba(61, 166, 255, 0.04) 62%,
+      transparent 76%
+    );
+
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+.dropbot-head {
+  position: relative;
+  z-index: 4;
+
+  width: 154px;
+  height: 116px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #edf3f9 45%,
+      #cdd8e3 100%
+    );
+
+  border: 2px solid rgba(255, 255, 255, 0.82);
+
+  box-shadow:
+    inset 0 3px 8px rgba(255, 255, 255, 0.90),
+    inset 0 -8px 16px rgba(104, 128, 151, 0.20),
+    0 12px 30px rgba(0, 0, 0, 0.24),
+    0 0 26px rgba(31, 145, 255, 0.20);
+}
+
+.dropbot-head::before {
+  content: "";
+
+  position: absolute;
+
+  top: 7px;
+  left: 18px;
+  right: 18px;
+
+  height: 16px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.46);
+
+  filter: blur(2px);
+
+  pointer-events: none;
+}
+
+.dropbot-face {
+  position: relative;
+
+  width: 118px;
+  height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  border-radius: 34px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #08101b 0%,
+      #050b12 55%,
+      #02060b 100%
+    );
+
+  border: 2px solid rgba(84, 168, 255, 0.50);
+
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.08),
+    inset 0 -8px 16px rgba(0, 0, 0, 0.50),
+    0 0 18px rgba(0, 153, 255, 0.24);
+}
+
+.dropbot-eye {
+  width: 16px;
+  height: 22px;
+
+  border-radius: 999px;
+
+  background: #50bfff;
+
+  box-shadow:
+    0 0 7px rgba(69, 186, 255, 0.95),
+    0 0 17px rgba(69, 186, 255, 0.75);
+
+  transform-origin: center;
+}
+
+.dropbot-smile {
+  position: absolute;
+
+  left: 50%;
+  bottom: 14px;
+
+  width: 28px;
+  height: 12px;
+
+  transform: translateX(-50%);
+
+  border-bottom: 3px solid #55c4ff;
+
+  border-radius: 0 0 30px 30px;
+
+  filter: drop-shadow(0 0 6px rgba(69, 186, 255, 0.75));
+}
+
+.dropbot-antenna {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 4px;
+
+  width: 34px;
+  height: 12px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #dfe8ef,
+      #a8bac9
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.18);
+}
+
+.dropbot-antenna::after {
+  content: "";
+
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: #5ac7ff;
+
+  box-shadow: 0 0 10px rgba(90, 199, 255, 0.85);
+}
+
+.dropbot-antenna-left {
+  left: 39px;
+  transform: rotate(-24deg);
+}
+
+.dropbot-antenna-left::after {
+  left: 3px;
+}
+
+.dropbot-antenna-right {
+  right: 39px;
+  transform: rotate(24deg);
+}
+
+.dropbot-antenna-right::after {
+  right: 3px;
+}
+
+.dropbot-neck {
+  position: relative;
+  z-index: 2;
+
+  width: 52px;
+  height: 16px;
+
+  margin-top: -3px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #7f95a6,
+      #3c5061
+    );
+
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.28),
+    0 4px 8px rgba(0, 0, 0, 0.18);
+}
+
+.dropbot-body {
+  position: relative;
+  z-index: 2;
+
+  width: 104px;
+  height: 76px;
+
+  margin-top: -1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 30px 30px 38px 38px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f9fcff 0%,
+      #d8e2eb 48%,
+      #b1c0cd 100%
+    );
+
+  border: 2px solid rgba(255, 255, 255, 0.78);
+
+  box-shadow:
+    inset 0 3px 7px rgba(255, 255, 255, 0.80),
+    inset 0 -8px 14px rgba(84, 111, 130, 0.18),
+    0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.dropbot-body-panel {
+  width: 48px;
+  height: 22px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0d1924,
+      #071019
+    );
+
+  border: 1px solid rgba(75, 177, 255, 0.45);
+
+  box-shadow:
+    0 0 10px rgba(50, 171, 255, 0.18);
+}
+
+.dropbot-side-light {
+  position: absolute;
+
+  top: 26px;
+
+  width: 9px;
+  height: 20px;
+
+  border-radius: 999px;
+
+  background: #56c7ff;
+
+  box-shadow:
+    0 0 8px rgba(86, 199, 255, 0.90),
+    0 0 14px rgba(86, 199, 255, 0.48);
+}
+
+.dropbot-side-light-left {
+  left: 10px;
+}
+
+.dropbot-side-light-right {
+  right: 10px;
+}
+
+.dropbot-hover-ring {
+  position: absolute;
+
+  z-index: 1;
+
+  top: 20px;
+
+  width: 196px;
+  height: 196px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(68, 183, 255, 0.26);
+
+  box-shadow:
+    inset 0 0 18px rgba(62, 180, 255, 0.08),
+    0 0 18px rgba(62, 180, 255, 0.08);
+
+  pointer-events: none;
+}
+
+.dropbot-hover-ring::before,
+.dropbot-hover-ring::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+}
+
+.dropbot-hover-ring::before {
+  inset: 8px;
+
+  border: 1px dashed rgba(86, 196, 255, 0.18);
+}
+
+.dropbot-hover-ring::after {
+  inset: 25px;
+
+  border: 1px solid rgba(86, 196, 255, 0.08);
+}
+
+.dropbot-base-glow {
+  position: absolute;
+
+  z-index: 0;
+
+  top: 211px;
+
+  width: 116px;
+  height: 26px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(56, 191, 255, 0.72) 0%,
+      rgba(56, 191, 255, 0.22) 44%,
+      transparent 74%
+    );
+
+  filter: blur(6px);
+}
+
+.dropbot-base-glow::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px 17px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(85, 204, 255, 0.78);
+
+  box-shadow:
+    0 0 12px rgba(85, 204, 255, 0.65);
+}
+
+.dropbot-connection {
+  position: relative;
+  z-index: 5;
+
+  min-width: 188px;
+  margin-top: 32px;
+
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 1px solid rgba(71, 183, 255, 0.38);
+
+  border-radius: 14px 14px 6px 6px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(7, 17, 28, 0.93),
+      rgba(12, 28, 43, 0.82)
+    );
+
+  backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.20),
+    0 0 18px rgba(32, 165, 255, 0.10);
+
+  color: #f7fbff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.dropbot-connection-dot {
+  width: 8px;
+  height: 8px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: #2de49a;
+
+  box-shadow:
+    0 0 8px rgba(45, 228, 154, 0.90),
+    0 0 14px rgba(45, 228, 154, 0.45);
+}
+
+.dropbot-connection-state {
+  position: relative;
+  z-index: 5;
+
+  min-width: 188px;
+
+  padding: 2px 14px 9px;
+
+  text-align: center;
+
+  border-left: 1px solid rgba(71, 183, 255, 0.38);
+  border-right: 1px solid rgba(71, 183, 255, 0.38);
+  border-bottom: 1px solid rgba(71, 183, 255, 0.38);
+
+  border-radius: 0 0 14px 14px;
+
+  background:
+    rgba(8, 19, 30, 0.78);
+
+  backdrop-filter: blur(16px);
+
+  color: rgba(205, 226, 241, 0.74);
+
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}

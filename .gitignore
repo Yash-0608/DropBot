@@ -1,0 +1,75 @@
+# Dependencies
+node_modules/
+android/DropBot/.gradle/
+android/DropBot/**/.gradle/
+
+# Build output
+dist/
+build/
+out/
+android/DropBot/build/
+android/DropBot/app/build/
+*.apk
+*.aab
+*.apks
+*.hprof
+
+# TypeScript, Vite, Electron and tooling caches
+.vite/
+.cache/
+.turbo/
+*.tsbuildinfo
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Android/Gradle local state
+android/DropBot/local.properties
+android/DropBot/.idea/
+android/DropBot/.kotlin/
+android/DropBot/**/captures/
+android/DropBot/**/.externalNativeBuild/
+android/DropBot/**/cxx/
+
+# IDE/editor files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.p12
+*.jks
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+*.part
+coverage/
+reports/

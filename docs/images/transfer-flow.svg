@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title">
+  <title id="title">DropBot transfer flow</title>
+  <rect width="1200" height="330" rx="26" fill="#102335"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Segoe UI,Arial" font-size="25" font-weight="700" fill="#fff">From drop to completed file</text>
+  <g font-family="Segoe UI,Arial" text-anchor="middle">
+    <g fill="#fff">
+      <rect x="45" y="110" width="170" height="120" rx="18"/><rect x="275" y="110" width="170" height="120" rx="18"/><rect x="505" y="110" width="170" height="120" rx="18"/><rect x="735" y="110" width="170" height="120" rx="18"/><rect x="965" y="110" width="170" height="120" rx="18"/>
+    </g>
+    <g fill="#168df5" font-size="29" font-weight="700"><text x="130" y="151">1</text><text x="360" y="151">2</text><text x="590" y="151">3</text><text x="820" y="151">4</text><text x="1050" y="151">5</text></g>
+    <g fill="#182231" font-size="15" font-weight="700"><text x="130" y="181">Drop file</text><text x="360" y="181">Validate</text><text x="590" y="181">Stream</text><text x="820" y="181">Save</text><text x="1050" y="181">Complete</text></g>
+    <g fill="#718096" font-size="12"><text x="130" y="205">Bot accepts file</text><text x="360" y="205">Name + pairing</text><text x="590" y="205">Progress events</text><text x="820" y="205">Downloads folder</text><text x="1050" y="205">Original filename</text></g>
+  </g>
+  <path d="M220 170h45M450 170h45M680 170h45M910 170h45" stroke="#62c4ff" stroke-width="4" stroke-linecap="round"/>
+</svg>

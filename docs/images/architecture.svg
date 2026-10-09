@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">DropBot system architecture</title>
+  <desc id="desc">A desktop Electron application and Android application communicate over a local Wi-Fi network.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#e8f4ff"/></linearGradient>
+    <linearGradient id="blue" x1="0" x2="1"><stop stop-color="#178df5"/><stop offset="1" stop-color="#57b9ff"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#1b6da8" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1200" height="560" rx="28" fill="url(#bg)"/>
+  <text x="600" y="56" text-anchor="middle" font-family="Segoe UI,Arial" font-size="28" font-weight="700" fill="#182231">DropBot local transfer architecture</text>
+  <text x="600" y="84" text-anchor="middle" font-family="Segoe UI,Arial" font-size="15" fill="#718096">Pair once with a QR code, then stream files directly over the same Wi-Fi network</text>
+  <g filter="url(#shadow)">
+    <rect x="70" y="150" width="300" height="280" rx="22" fill="#fff"/>
+    <rect x="450" y="150" width="300" height="280" rx="22" fill="#fff"/>
+    <rect x="830" y="150" width="300" height="280" rx="22" fill="#fff"/>
+  </g>
+  <g font-family="Segoe UI,Arial">
+    <text x="220" y="195" text-anchor="middle" font-size="21" font-weight="700" fill="#182231">Desktop</text>
+    <text x="220" y="222" text-anchor="middle" font-size="14" fill="#718096">Electron + React</text>
+    <rect x="108" y="250" width="224" height="48" rx="12" fill="#eaf5ff"/><text x="220" y="280" text-anchor="middle" font-size="14" fill="#168df5">Floating DropBot UI</text>
+    <rect x="108" y="314" width="224" height="48" rx="12" fill="#eaf5ff"/><text x="220" y="344" text-anchor="middle" font-size="14" fill="#168df5">HTTP connection server</text>
+    <text x="220" y="394" text-anchor="middle" font-size="13" fill="#718096">Downloads + streamed progress</text>
+    <text x="600" y="195" text-anchor="middle" font-size="21" font-weight="700" fill="#182231">Local network</text>
+    <text x="600" y="222" text-anchor="middle" font-size="14" fill="#718096">HTTP streaming transport</text>
+    <path d="M500 290h200M530 340h140" stroke="#168df5" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 12"/>
+    <circle cx="600" cy="315" r="32" fill="url(#blue)"/><text x="600" y="322" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">↔</text>
+    <text x="600" y="394" text-anchor="middle" font-size="13" fill="#718096">One-time token authentication</text>
+    <text x="980" y="195" text-anchor="middle" font-size="21" font-weight="700" fill="#182231">Android phone</text>
+    <text x="980" y="222" text-anchor="middle" font-size="14" fill="#718096">Kotlin + Jetpack Compose</text>
+    <rect x="868" y="250" width="224" height="48" rx="12" fill="#eaf5ff"/><text x="980" y="280" text-anchor="middle" font-size="14" fill="#168df5">QR pairing + status UI</text>
+    <rect x="868" y="314" width="224" height="48" rx="12" fill="#eaf5ff"/><text x="980" y="344" text-anchor="middle" font-size="14" fill="#168df5">Downloads receiver</text>
+    <text x="980" y="394" text-anchor="middle" font-size="13" fill="#718096">Original names + extensions</text>
+  </g>
+  <path d="M370 290h70M760 290h70" stroke="#168df5" stroke-width="4" marker-end="url(#arrow)"/>
+</svg>
